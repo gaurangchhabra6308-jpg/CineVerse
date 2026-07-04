@@ -1,30 +1,11 @@
-import { useState, useEffect } from 'react'
-import { getTrendingMovies } from '../appwrite'
+import { useState, useEffect } from "react";
 
-/**
- * Custom hook for fetching trending movies
- * @returns {Object} { trendingMovies, loading, error }
- */
 export const useTrending = () => {
-    const [trendingMovies, setTrendingMovies] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState('')
+  const [trendingMovies] = useState([]);
+  const [loading] = useState(false);
+  const [error] = useState("");
 
-    useEffect(() => {
-        const loadTrending = async () => {
-            try {
-                const trending = await getTrendingMovies()
-                setTrendingMovies(trending)
-            } catch (err) {
-                console.error('Error loading trending movies:', err)
-                setError('Failed to load trending movies')
-            } finally {
-                setLoading(false)
-            }
-        }
+  useEffect(() => {}, []);
 
-        loadTrending()
-    }, [])
-
-    return { trendingMovies, loading, error }
-}
+  return { trendingMovies, loading, error };
+};

@@ -44,7 +44,6 @@ const App = () => {
     // Determine which results to use
     const isSearching = !!debouncedSearchTerm
     const { movies, loading, error, totalPages, hasMore } = isSearching ? searchResults : filteredResults
-
     const { trendingMovies } = useTrending()
     const { movieDetails, loading: detailsLoading, fetchDetails, clearDetails } = useMovieDetails()
     const { favorites, addFavorite, removeFavorite, isFavorite } = useFavorites()
@@ -81,7 +80,10 @@ const App = () => {
             <div className="wrapper flex-grow w-full">
                 <header>
                     <img src="./hero.png" alt="Hero Banner" />
-                    <h1>Find <span className='text-gradient'>Movies</span> You'll Enjoy Without the Hassle</h1>
+                    <h1>Discover Your Next Favorite Movie with<span className="text-gradient"> CineVerse</span></h1>
+                      <p className="mt-4 text-gray-400 text-lg max-w-2xl mx-auto">
+        Browse thousands of movies, discover trending titles, and save your favorites—all in one place.
+    </p>
                     <Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
                 </header>
 
@@ -130,7 +132,7 @@ const App = () => {
                             <p>Start adding movies to your favorites by clicking the heart icon!</p>
                         </div>
                     ) : loading ? (
-                        <p className='text-white'><Spinner /></p>
+                        <div className='text-white'><Spinner /></div>
                     ) : error ? (
                         <p className="text-red-500">{error}</p>
                     ) : (
@@ -147,7 +149,14 @@ const App = () => {
                                         />
                                     ))
                                 ) : (
-                                    <p className="text-white">No movies found.</p>
+                                    <div className="text-center py-10">
+                                    <h3 className="text-2xl font-semibold text-white">
+                                     No Movies Found
+                                     </h3>
+                                     <p className="text-gray-400 mt-2">
+                                    Try searching with a different keyword.
+                                     </p>
+                                    </div>
                                 )}
                             </ul>
 
