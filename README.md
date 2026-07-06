@@ -206,14 +206,13 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👤 Author
 
-**Peter Njuguna**
-- GitHub: [@pcodesdev](https://github.com/pcodesdev)
-- X (Twitter): [@PcodesDev](https://x.com/PcodesDev)
-- Portfolio: [pcodesdev.github.io](https://pcodesdev.github.io/)
+**Gaurang Chhabra**
+- GitHub: [@Github](https://github.com/gaurangchhabra6308-jpg)
+- Linkedin: [Linkedin](https://www.linkedin.com/in/gaurang-chhabra-a0429836b/)
 
 ## 📧 Contact
 
-For questions or feedback, please reach out at [pcodesdev@gmail.com](mailto:pcodesdev@gmail.com)
+For questions or feedback, please reach out at [gaurangchhabra6308@gmail.com](mailto:gaurangchhabra6308@gmail.com)
 
 ---
 
